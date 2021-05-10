@@ -13,7 +13,9 @@ const App = () => {
     ]);
 
     const addNewGoalHandler = (newGoal) => {
-        setCourseGoals(courseGoals.concat(newGoal))
+        // setCourseGoals(courseGoals.concat(newGoal))
+        // This way state update is forced and faster
+        setCourseGoals((prevCourseGoals) => prevCourseGoals.concat(newGoal));
     }
 
     return (
