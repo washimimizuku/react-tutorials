@@ -8,7 +8,7 @@ const GoalItem = (props) => {
       onPress={props.onDelete.bind(this, props.uid)}
     >
       <View style={styles.listItem}>
-        <Text>{props.title}</Text>
+        <Text style={styles.itemText}>{props.title}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -18,9 +18,12 @@ const styles = StyleSheet.create({
   listItem: {
     padding: 10,
     marginVertical: 10,
-    backgroundColor: '#ccc',
-    borderColor: 'black',
+    backgroundColor: '#eee',
+    borderColor: '#ccc',
     borderWidth: 1,
+  },
+  itemText: {
+    color: '#444',
   },
 });
 
