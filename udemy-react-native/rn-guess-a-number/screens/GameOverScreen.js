@@ -11,8 +11,14 @@ const GameOverScreen = (props) => {
       <View style={styles.imageContainer}>
         <Image
           source={require('../assets/success.png')}
+          /*
+          source={{
+            uri: 'https://nypost.com/wp-content/uploads/sites/2/2019/07/travel-matterhorn-mountain.jpg?quality=90&strip=all&w=1236&h=820&crop=1',
+          }}
+          */
           style={styles.image}
           resizeMode="cover"
+          fadeDuration={1000}
         />
       </View>
       <BodyText>Number of rounds: {props.roundsNumber}</BodyText>
