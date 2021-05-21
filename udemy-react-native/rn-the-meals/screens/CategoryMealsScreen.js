@@ -30,6 +30,16 @@ const CategoryMealsScreen = (props) => {
   );
 };
 
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+  const categoryId = navigationData.navigation.getParam('categoryId');
+
+  const selectedCategory = CATEGORIES.find((cat) => cat.id === categoryId);
+
+  return {
+    headerTitle: selectedCategory.title,
+  };
+};
+
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
