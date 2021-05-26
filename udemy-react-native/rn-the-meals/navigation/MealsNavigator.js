@@ -10,7 +10,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 import CategoriesScreen from '../screens/CategoriesScreen';
-import CategoriesMealsScreen from '../screens/CategoryMealsScreen';
+import CategoryMealsScreen from '../screens/CategoryMealsScreen';
 import MealDetailScreen from '../screens/MealDetailScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import FiltersScreen from '../screens/FiltersScreen';
@@ -35,18 +35,14 @@ const MealsNavigator = createStackNavigator(
   {
     Categories: {
       screen: CategoriesScreen,
-      navigationOptions: {
-        headerTitle: 'Meal Categories',
-      },
     },
     CategoryMeals: {
-      screen: CategoriesMealsScreen,
+      screen: CategoryMealsScreen,
     },
     MealDetail: MealDetailScreen,
   },
   {
-    initialRouteName: 'Categories', // Not needed because its first one above
-    mode: 'modal',
+    // initialRouteName: 'Categories',
     defaultNavigationOptions: defaultStackNavOptions,
   }
 );
@@ -57,6 +53,7 @@ const FavNavigator = createStackNavigator(
     MealDetail: MealDetailScreen,
   },
   {
+    // initialRouteName: 'Categories',
     defaultNavigationOptions: defaultStackNavOptions,
   }
 );
@@ -75,7 +72,7 @@ const tabScreenConfig = {
         Platform.OS === 'android' ? (
           <Text style={{ fontFamily: 'open-sans-bold' }}>Meals</Text>
         ) : (
-          <Text>Meals</Text>
+          'Meals'
         ),
     },
   },
@@ -90,7 +87,7 @@ const tabScreenConfig = {
         Platform.OS === 'android' ? (
           <Text style={{ fontFamily: 'open-sans-bold' }}>Favorites</Text>
         ) : (
-          <Text>Favorites</Text>
+          'Favorites'
         ),
     },
   },
@@ -99,7 +96,7 @@ const tabScreenConfig = {
 const MealsFavTabNavigator =
   Platform.OS === 'android'
     ? createMaterialBottomTabNavigator(tabScreenConfig, {
-        activeColor: 'white',
+        activeTintColor: 'white',
         shifting: true,
         barStyle: {
           backgroundColor: Colors.primaryColor,
@@ -119,9 +116,9 @@ const FiltersNavigator = createStackNavigator(
     Filters: FiltersScreen,
   },
   {
-    navigationOptions: {
-      drawerLabel: 'Filters',
-    },
+    // navigationOptions: {
+    //   drawerLabel: 'Filters!!!!'
+    // },
     defaultNavigationOptions: defaultStackNavOptions,
   }
 );
