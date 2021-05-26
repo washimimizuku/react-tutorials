@@ -71,6 +71,9 @@ const MealsFavNavigator =
     ? createMaterialBottomTabNavigator(tabScreenConfig, {
         activeColor: 'white',
         shifting: true,
+        barStyle: {
+          backgroundColor: Colors.primaryColor,
+        },
       })
     : createBottomTabNavigator(tabScreenConfig, {
         tabBarOptions: {
