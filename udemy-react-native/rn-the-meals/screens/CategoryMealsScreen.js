@@ -18,7 +18,7 @@ const CategoryMealScreen = (props) => {
   if (displayedMeals.length === 0) {
     return (
       <View style={styles.content}>
-        <DefaultText>No meals found, maybe check your filters.</DefaultText>
+        <DefaultText>No meals found, maybe check your filters?</DefaultText>
       </View>
     );
   }

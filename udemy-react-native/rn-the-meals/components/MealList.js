@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { View, FlatList, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import MealItem from './MealItem';
@@ -11,7 +11,6 @@ const MealList = (props) => {
     const isFavorite = favoriteMeals.some(
       (meal) => meal.id === itemData.item.id
     );
-
     return (
       <MealItem
         title={itemData.item.title}
@@ -37,9 +36,7 @@ const MealList = (props) => {
     <View style={styles.list}>
       <FlatList
         data={props.listData}
-        keyExtractor={(item, index) => {
-          item.id;
-        }}
+        keyExtractor={(item, index) => item.id}
         renderItem={renderMealItem}
         style={{ width: '100%' }}
       />
@@ -52,6 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 15,
   },
 });
 
