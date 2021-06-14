@@ -3,7 +3,7 @@ import CartItem from '../../models/cart';
 
 const initialState = {
   items: {},
-  sum: 0,
+  totalAmount: 0,
 };
 
 export default (state = initialState, action) => {

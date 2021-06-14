@@ -5,7 +5,6 @@ import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 import productsReducer from './store/reducers/products';
 import cartReducer from './store/reducers/cart';
@@ -18,8 +17,7 @@ const rootReducer = combineReducers({
   cart: cartReducer,
 });
 
-// TODO: composeWithDevTools only on DEV!!!
-const store = createStore(rootReducer, composeWithDevTools());
+const store = createStore(rootReducer);
 
 const fetchFonts = () => {
   return Font.loadAsync({
