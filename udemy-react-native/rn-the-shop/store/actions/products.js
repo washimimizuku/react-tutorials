@@ -95,7 +95,6 @@ export const updateProduct = (id, title, description, imageUrl) => {
         title: title,
         description: description,
         imageUrl: imageUrl,
-        price: 44,
       }),
     });
 
