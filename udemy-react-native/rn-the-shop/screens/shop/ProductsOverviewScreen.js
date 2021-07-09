@@ -34,6 +34,19 @@ const ProductsOverviewScreen = (props) => {
     setIsLoading(false);
   }, [dispatch, setIsLoading, setError]);
 
+  // To fetch when revisiting page
+  useEffect(() => {
+    const willFocusSub = props.navigation.addListener(
+      'willFocus',
+      loadProducts
+    );
+
+    return () => {
+      willFocusSub.remove();
+    };
+  }, [loadProducts]);
+
+  // To fetch initially
   useEffect(() => {
     loadProducts();
   }, [dispatch, loadProducts]);
