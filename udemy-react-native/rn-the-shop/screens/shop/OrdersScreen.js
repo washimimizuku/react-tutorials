@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   View,
+  Text,
   FlatList,
   Platform,
   ActivityIndicator,
@@ -31,6 +32,14 @@ const OrdersScreen = (props) => {
     return (
       <View style={styles.centered}>
         <ActivityIndicator size="large" color={Colors.primary} />
+      </View>
+    );
+  }
+
+  if (orders.length === 0) {
+    return (
+      <View style={styles.emptyList}>
+        <Text>No orders found, maybe start ordering some products?</Text>
       </View>
     );
   }
@@ -66,8 +75,14 @@ OrdersScreen.navigationOptions = (navData) => {
     ),
   };
 };
+
 const styles = StyleSheet.create({
   centered: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emptyList: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
