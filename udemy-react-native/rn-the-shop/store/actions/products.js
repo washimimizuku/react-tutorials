@@ -41,10 +41,14 @@ export const fetchProducts = () => {
 };
 
 export const deleteProduct = (productId) => {
-  return async (dispatch) => {
-    const response = await fetch(FIREBASE_URL + `/products/${productId}.json`, {
-      method: 'DELETE',
-    });
+  return async (dispatch, getState) => {
+    const token = getState().auth.token;
+    const response = await fetch(
+      FIREBASE_URL + `/products/${productId}.json?auth=${token}`,
+      {
+        method: 'DELETE',
+      }
+    );
 
     if (!response.ok) {
       throw new Error('Something went wrong!');
@@ -58,19 +62,23 @@ export const deleteProduct = (productId) => {
 };
 
 export const createProduct = (title, description, imageUrl, price) => {
-  return async (dispatch) => {
-    const response = await fetch(FIREBASE_URL + '/products.json', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        title,
-        description,
-        imageUrl,
-        price,
-      }),
-    });
+  return async (dispatch, getState) => {
+    const token = getState().auth.token;
+    const response = await fetch(
+      FIREBASE_URL + `/products.json?auth=${token}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title,
+          description,
+          imageUrl,
+          price,
+        }),
+      }
+    );
 
     const resData = await response.json();
 
@@ -87,18 +95,22 @@ export const createProduct = (title, description, imageUrl, price) => {
 };
 
 export const updateProduct = (id, title, description, imageUrl) => {
-  return async (dispatch) => {
-    const response = await fetch(FIREBASE_URL + `/products/${id}.json`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        title: title,
-        description: description,
-        imageUrl: imageUrl,
-      }),
-    });
+  return async (dispatch, getState) => {
+    const token = getState().auth.token;
+    const response = await fetch(
+      FIREBASE_URL + `/products/${id}.json?auth=${token}`,
+      {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          title: title,
+          description: description,
+          imageUrl: imageUrl,
+        }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error('Something went wrong!');

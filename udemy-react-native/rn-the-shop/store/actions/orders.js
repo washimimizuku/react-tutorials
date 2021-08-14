@@ -35,20 +35,24 @@ export const fetchOrders = () => {
 };
 
 export const addOrder = (cartItems, totalAmount) => {
-  return async (dispatch) => {
+  return async (dispatch, getState) => {
     const date = new Date();
 
-    const response = await fetch(FIREBASE_URL + '/orders/u1.json', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        cartItems: cartItems,
-        totalAmount: totalAmount,
-        date: date,
-      }),
-    });
+    const token = getState().auth.token;
+    const response = await fetch(
+      FIREBASE_URL + `/orders/u1.json?auth=${token}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cartItems: cartItems,
+          totalAmount: totalAmount,
+          date: date,
+        }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error('Something went wrong!');
