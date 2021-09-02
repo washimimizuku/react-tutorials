@@ -7,18 +7,25 @@ import {
   ScrollView,
   Button,
 } from 'react-native';
+import { useDispatch } from 'react-redux';
 
 import Colors from '../constants/Colors';
+import * as placesActions from '../store/places-actions';
 
 const NewPlaceScreen = (props) => {
   const [titleValue, setTitleValue] = useState('');
+
+  const dispatch = useDispatch();
 
   const titleChangeHandler = (text) => {
     // We could add validation
     setTitleValue(text);
   };
 
-  const savePlaceHanfler = () => {};
+  const savePlaceHanfler = () => {
+    dispatch(placesActions.addPlace(titleValue));
+    props.navigation.goBack();
+  };
 
   return (
     <ScrollView>
