@@ -9,13 +9,13 @@
   },
   "dependencies": {
     "expo": "~41.0.1",
-    "expo-app-loading": "^1.0.3",
-    "expo-font": "~9.1.0",
+    "expo-app-loading": "^1.1.2",
+    "expo-font": "~9.2.1",
     "expo-status-bar": "~1.0.4",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-native": "0.64.1",
-    "react-native-web": "~0.16.1"
+    "react-native": "0.64.2",
+    "react-native-web": "~0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
