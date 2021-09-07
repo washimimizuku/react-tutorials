@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <View>
-      <Button title="Take Image" onPress={() => {}} />
+      <Button title="Take Image" onPress={pickImage} />
     </View>
   );
 };
