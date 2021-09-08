@@ -26,7 +26,9 @@ import UserProductsScreen, {
 import EditProductScreen, {
   screenOptions as editProductScreenOptions,
 } from '../screens/user/EditProductScreen';
-import AuthScreen from '../screens/user/AuthScreen';
+import AuthScreen, {
+  screenOptions as authScreenOptions,
+} from '../screens/user/AuthScreen';
 import StartupScreen from '../screens/StartupScreen';
 
 import Colors from '../constants/Colors';
@@ -161,7 +163,7 @@ export const AdminNavigator = () => {
 
 const ShopDrawerNavigator = createDrawerNavigator();
 
-const ShopNavigator = () => {
+export const ShopNavigator = () => {
   const dispatch = useDispatch();
   return (
     <ShopDrawerNavigator.Navigator
@@ -260,6 +262,20 @@ const ShopNavigator = () => {
 //     },
 //   }
 // );
+
+const AuthStackNavigator = createStackNavigator();
+
+export const AuthNavigator = () => {
+  return (
+    <AuthStackNavigator screenOptions={defaultNavOptions}>
+      <AuthStackNavigator.Screen
+        name="Auth"
+        component={AuthScreen}
+        options={authScreenOptions}
+      />
+    </AuthStackNavigator>
+  );
+};
 
 // const AuthNavigator = createStackNavigator(
 //   {
