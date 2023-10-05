@@ -4660,10 +4660,10 @@ expo-modules-core@1.5.8:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
-expo-status-bar@~1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.5.0.tgz#b4905c178fef9d7f381aa16300f6bf4e199cf423"
-  integrity sha512-Sf/yTITfipPAFNOTT5/QZS4Ns/RuSe0xjrLtu3qir2CbyQ58A22gojM6EUzP5JX2YeXQCMSIozLRvL0mYr93uw==
+expo-status-bar@~1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.7.1.tgz#f2772a529187282eaa0741279ed8d525bdce54c4"
+  integrity sha512-Wkm9uCmuQQBSU+l/AekWAQ1d0FYw560yL116+OAKJDyKBOUpPURoWkFbabM1EDxv+5scTuSThr/CvsA0nsSCow==
 
 expo@~49.0.1:
   version "49.0.5"
