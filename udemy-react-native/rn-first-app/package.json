@@ -8,11 +8,11 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "~49.0.1",
+    "expo": "~49.0.10",
     "expo-status-bar": "~1.7.1",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-native": "0.71.11",
+    "react-native": "0.72.4",
     "react-native-web": "~0.19.5"
   },
   "devDependencies": {
