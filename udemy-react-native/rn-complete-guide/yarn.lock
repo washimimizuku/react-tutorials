@@ -4584,10 +4584,10 @@ expo-modules-core@0.9.2:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
-expo-status-bar@~1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.8.0.tgz#36f70e8b1ebccca0a37a0dc46818334b8d66545b"
-  integrity sha512-umGBosbKCrvK/DRpWsEp+1/fU55J3PEHFrM/SAqiGv2lU1A2lhvx1xHEZQad3Lu8gEqv7Ueb0eXa3MsXbae20w==
+expo-status-bar@~1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.9.0.tgz#4d34a0f0a1c748eb876e19e5174dd85235ad4859"
+  integrity sha512-5vx9dgWT59opYTndnnF3b7vEfvEJinCywrAPEQaXT7gtDzssARy/7fzaWF8Cyg8SqbGUn8nU/UtgnCc1fqLnAA==
 
 expo@~45.0.0:
   version "45.0.8"
