@@ -3115,15 +3115,10 @@ expo-modules-core@3.0.28:
   dependencies:
     invariant "^2.2.4"
 
-expo-server@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/expo-server/-/expo-server-1.0.5.tgz#2d52002199a2af99c2c8771d0657916004345ca9"
-  integrity sha512-IGR++flYH70rhLyeXF0Phle56/k4cee87WeQ4mamS+MkVAVP+dDlOHf2nN06Z9Y2KhU0Gp1k+y61KkghF7HdhA==
-
-expo-status-bar@~1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.9.0.tgz#4d34a0f0a1c748eb876e19e5174dd85235ad4859"
-  integrity sha512-5vx9dgWT59opYTndnnF3b7vEfvEJinCywrAPEQaXT7gtDzssARy/7fzaWF8Cyg8SqbGUn8nU/UtgnCc1fqLnAA==
+expo-status-bar@~1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/expo-status-bar/-/expo-status-bar-1.12.1.tgz#52ce594aab5064a0511d14375364d718ab78aa66"
+  integrity sha512-/t3xdbS8KB0prj5KG5w7z+wZPFlPtkgs95BsmrP/E7Q0xHXTcDcQ6Cu2FkFuRM+PKTb17cJDnLkawyS5vDLxMA==
 
 expo@~54.0.0:
   version "54.0.27"
